@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="body-particles"></div>
+    <div class="splash-screen">
+        <img src="logo.png" alt="Chat Logo" class="logo">
+    </div>
+    <div class="username-screen" style="display: none;">
+        <input type="text" id="username" placeholder="Enter your name">
+        <button onclick="startChat()">Start Chat</button>
+    </div>
+    <div class="chat-container" style="display: none;">
+        <div class="chat-header">
+            <span>Chat App</span>
+            <button id="refreshButton" onclick="refreshChat()">Refresh</button> <!-- Refresh button -->
+        </div>
+        <div class="chat-messages" id="chatMessages">
+            <div id="particles-js"></div>
+        </div>
+        <div class="chat-input">
+            <input type="text" id="messageInput" placeholder="Type a message...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
